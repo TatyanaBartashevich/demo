@@ -1,0 +1,43 @@
+  491  pwd
+  492  mkdir dir1
+  493  cd dir1
+  494  mkdir test_folder{1..3}
+  495  cd test_folder1
+  496  touch file{1..3}.txt file{1..2}.json
+  497  mkdir folder{1..3}
+  498  ls -l
+  499  vim file1.txt
+  500  cd ..
+  502  mv test_folder1/{file1.json,file1.txt} test_folder2
+  503  cp test_folder1/{file2.json,file2.txt} test_folder2
+  505  find -name "file1.json"
+  507  grep -i зимой test_folder2/file1.txt
+  508  head -3 test_folder2/file1.txt
+  509  tail -2 test_folder2/file1.txt
+  510  less test_folder2/file1.txt
+  511  date
+  536  mv test_folder1/file2.txt script.txt
+  539  chmod +x script.txt 
+  543  nano script.txt 
+  552  ./script.txt 
+  553  cat script.txt 
+  554  history >>hist.txt
+
+$ cat script.txt
+
+#!/usr/bin/bash
+Echo "Зайти в папку:"
+cd ./test_folder3
+mkdir test1_{1..3}
+Echo "Зайти в папку test1_1"
+cd test1_1
+Echo "Создать 3 txt и 2 json"
+touch file_test{1..3}.txt
+touch file_test{1..2}.json
+Echo "Создать 3 папки"
+mkdir test2_{1..3}
+Echo "Вывести список содержимого"
+ls -la
+Echo "Переместить любые 2 файла в любую другую папку"
+mv file_test1.txt ./test2_1
+mv file_test2.json ./test2_1
