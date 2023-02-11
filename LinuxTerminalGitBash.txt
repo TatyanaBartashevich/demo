@@ -41,3 +41,4 @@ ls -la
 Echo "Переместить любые 2 файла в любую другую папку"
 mv file_test1.txt ./test2_1
 mv file_test2.json ./test2_1
+коммент
